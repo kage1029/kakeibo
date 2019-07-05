@@ -1,0 +1,19 @@
+<h2>買ったものを記入する</h2>
+
+<%= form_tag("/create") do %>
+    <div class="form-group">
+        <%= label_tag "form-title", "買ったもの" %>
+        <%= text_field :memos, :title, id:"form-title", class:"form-control", placeholder: "HUNTER×HUNTER 全巻" %>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-content", "金額" %>
+        <%= text_field :memos, :price, id:"form-content", class:"form-control", placeholder: "38900"%>
+    </div>
+    <div class="form-group">
+        <%= label_tag "form-title", "購入月" %>
+        <%= text_field :memos, :date, id:"form-date", class:"form-control", placeholder: "6" %>
+    </div>
+    
+   
+    <%= submit_tag "メモ作成", class:"btn btn-primary" %>
+<% end %>
